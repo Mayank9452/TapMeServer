@@ -174,10 +174,10 @@ bot.onText(/\/start/, async (msg) => {
         return;
       }
 
-      bot.sendMessage(chatId, `Welcome to TapMe! You have 0 coins. Click the link to manage your coins: http://localhost:3000?userId=${userId}`);
+      bot.sendMessage(chatId, `Welcome to TapMe! You have 0 coins. Click the link to manage your coins: https://tapmeclient.netlify.app/?userId=${userId}`);
     } else {
       const user = users[0];
-      bot.sendMessage(chatId, `Welcome back! You have ${user.coins} coins. Click the link to manage your coins: http://localhost:3000?userId=${userId}`);
+      bot.sendMessage(chatId, `Welcome back! You have ${user.coins} coins. Click the link to manage your coins: https://tapmeclient.netlify.app/?userId=${userId}`);
     }
   } catch (err) {
     console.error('Error in /start command:', err);
